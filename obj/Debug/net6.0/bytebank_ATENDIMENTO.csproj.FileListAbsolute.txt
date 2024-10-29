@@ -1,0 +1,15 @@
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\bin\Debug\net6.0\bytebank_ATENDIMENTO.exe
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\bin\Debug\net6.0\bytebank_ATENDIMENTO.deps.json
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\bin\Debug\net6.0\bytebank_ATENDIMENTO.runtimeconfig.json
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\bin\Debug\net6.0\bytebank_ATENDIMENTO.dll
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\bin\Debug\net6.0\bytebank_ATENDIMENTO.pdb
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\obj\Debug\net6.0\bytebank_ATENDIMENTO.csproj.AssemblyReference.cache
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\obj\Debug\net6.0\bytebank_ATENDIMENTO.GeneratedMSBuildEditorConfig.editorconfig
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\obj\Debug\net6.0\bytebank_ATENDIMENTO.AssemblyInfoInputs.cache
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\obj\Debug\net6.0\bytebank_ATENDIMENTO.AssemblyInfo.cs
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\obj\Debug\net6.0\bytebank_ATENDIMENTO.csproj.CoreCompileInputs.cache
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\obj\Debug\net6.0\bytebank_ATENDIMENTO.dll
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\obj\Debug\net6.0\refint\bytebank_ATENDIMENTO.dll
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\obj\Debug\net6.0\bytebank_ATENDIMENTO.pdb
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\obj\Debug\net6.0\bytebank_ATENDIMENTO.genruntimeconfig.cache
+F:\Estudos\Array_Collections_C-aula01\bytebank_ATENDIMENTO\obj\Debug\net6.0\ref\bytebank_ATENDIMENTO.dll
