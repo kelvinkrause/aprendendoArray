@@ -2,9 +2,7 @@
 {
     public class Cliente
     {
-
         public string Cpf { get; set; }
-
         private string _nome;
         public string Nome
         {
