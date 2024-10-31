@@ -4,7 +4,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
 {
     public class ListaDeContasCorrentes
     {
-        private ContaCorrente[] _itens = null;
+        private ContaCorrente[] _itens = null!;
         private int _proximaPosicao = 0;
 
         public ListaDeContasCorrentes(int tamanhoInicial = 5) 
@@ -16,7 +16,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
         public void Adicionar(ContaCorrente conta)
         {
             VerificarCapacidade(_proximaPosicao + 1);
-            Console.WriteLine($"Adicionando item na posição {_proximaPosicao}");
+            Console.WriteLine($"Adicionando item na posição {_proximaPosicao} -> {conta.Conta}");
             _itens[_proximaPosicao] = conta;
             _proximaPosicao++;
         }
@@ -41,7 +41,9 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
             //Através do indice da conta a ser removido, começa a subescrever com as contas subsequentes.
             for (int i = indiceItem; i < _proximaPosicao - 1; i++)
             {
+                //Console.WriteLine($"ANTES: Pos. {i} - {_itens[i].Conta} - {i + 1} - {_itens[i + 1].Conta} ");
                 _itens[i] = _itens[i + 1];
+                _itens[i + 1] = null!;
             }
             _proximaPosicao--;
         }

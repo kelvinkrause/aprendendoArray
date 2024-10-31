@@ -25,6 +25,8 @@ internal class Program
         listaDeContas.Adicionar(kelvin);
         listaDeContas.Adicionar(giovana);
         listaDeContas.Adicionar(particular);
+        listaDeContas.Adicionar(new ContaCorrente(111, "999999-MM"));
+        listaDeContas.Adicionar(new ContaCorrente(222, "222222-AA"));
 
         //listaDeContas.Adicionar(new ContaCorrente(555, "555555-PT"));
         //listaDeContas.Adicionar(new ContaCorrente(555, "555555-PT"));
@@ -33,8 +35,12 @@ internal class Program
         //ContaCorrente conta = listaDeContas.ContaComMaiorSaldo();
         //Console.WriteLine(conta.ToString());  
 
+        System.Console.WriteLine($"\nLista de Contas Correntes \n");
+        listaDeContas.ExibirContasCorrentes();
+
         listaDeContas.Remover(kelvin);
 
+        System.Console.WriteLine($"\nLista de Contas Correntes com a conta kelvin excluida\n");
         listaDeContas.ExibirContasCorrentes();
     
     
