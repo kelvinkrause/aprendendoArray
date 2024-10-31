@@ -18,7 +18,9 @@ internal class Program
         particular.Saldo = 20000;
         
         Cliente cliente = new Cliente();
-        cliente.Nome = "";
+        particular.Titular = cliente;
+
+        particular.Titular.Nome = "Particular";
 
         listaDeContas.Adicionar(kelvin);
         listaDeContas.Adicionar(giovana);
@@ -28,9 +30,12 @@ internal class Program
         //listaDeContas.Adicionar(new ContaCorrente(555, "555555-PT"));
         //listaDeContas.Adicionar(new ContaCorrente(555, "555555-PT"));
 
-        ContaCorrente conta = listaDeContas.ContaComMaiorSaldo();
+        //ContaCorrente conta = listaDeContas.ContaComMaiorSaldo();
+        //Console.WriteLine(conta.ToString());  
 
-        Console.WriteLine(conta.ToString());  
+        listaDeContas.Remover(kelvin);
+
+        listaDeContas.ExibirContasCorrentes();
     
     
     }

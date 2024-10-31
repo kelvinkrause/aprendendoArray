@@ -21,6 +21,31 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
             _proximaPosicao++;
         }
 
+        public void Remover(ContaCorrente conta)
+        {
+            int indiceItem = 0;
+            
+            //Procura o indice da Conta na lista.
+            for (int i = 0; i < _itens.Length; i++)
+            {
+                if (_itens[i] == conta)
+                {
+                    indiceItem = i;
+                    break;
+                }
+            }
+
+            //Console.WriteLine("\nindice item: " + indiceItem);
+            //Console.WriteLine("proxima posicao: " + _proximaPosicao + "\n");
+
+            //Através do indice da conta a ser removido, começa a subescrever com as contas subsequentes.
+            for (int i = indiceItem; i < _proximaPosicao - 1; i++)
+            {
+                _itens[i] = _itens[i + 1];
+            }
+            _proximaPosicao--;
+        }
+
 
         private void VerificarCapacidade(int tamanhoNecessario)
         {
@@ -28,7 +53,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
             {
                 return;
             }
-            System.Console.WriteLine("Aumentando a capacidade da lista");
+            Console.WriteLine("Aumentando a capacidade da lista");
             ContaCorrente[] novoArray = new ContaCorrente[tamanhoNecessario];
 
             for(int i = 0; i < _itens.Length; i++)
@@ -58,6 +83,17 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
             }
 
             return contaComMaiorSaldo!;
+        }
+
+        public void ExibirContasCorrentes()
+        {
+            for(int i = 0; i < _itens.Length; i++)
+            {
+                if(_itens[i] != null)
+                {
+                    Console.WriteLine($"Conta: {_itens[i].Conta}");                    
+                }
+            }
         }
 
     }
