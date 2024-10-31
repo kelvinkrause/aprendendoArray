@@ -41,7 +41,6 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
             //Através do indice da conta a ser removido, começa a subescrever com as contas subsequentes.
             for (int i = indiceItem; i < _proximaPosicao - 1; i++)
             {
-                //Console.WriteLine($"ANTES: Pos. {i} - {_itens[i].Conta} - {i + 1} - {_itens[i + 1].Conta} ");
                 _itens[i] = _itens[i + 1];
                 _itens[i + 1] = null!;
             }
