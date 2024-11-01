@@ -97,5 +97,34 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
             }
         }
 
+        public ContaCorrente RetornaContaIndice(int indice)
+        {
+            if(indice < 0 || indice >= _proximaPosicao)
+            {
+                throw new ArgumentOutOfRangeException(nameof(indice));
+                //System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'indice')
+            }
+            return _itens[indice];
+        }
+
+        public int Tamanho 
+        {
+            get 
+            {
+                return _proximaPosicao;
+            }
+        }
+
+        //Indexador
+        public ContaCorrente this[int indice]
+        {
+            get 
+            {
+                Console.WriteLine("Passou aqui");
+                return RetornaContaIndice(indice);
+            }
+        }
+
+
     }
 }

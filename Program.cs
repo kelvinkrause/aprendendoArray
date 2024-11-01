@@ -42,6 +42,15 @@ internal class Program
 
         System.Console.WriteLine($"\nLista de Contas Correntes com a conta kelvin excluida\n");
         listaDeContas.ExibirContasCorrentes();
+
+        Console.WriteLine();
+
+        ContaCorrente contaAlguma = listaDeContas.RetornaContaIndice(1);
+        Console.WriteLine(contaAlguma.Conta);
+
+        System.Console.WriteLine();
+
+        Console.WriteLine(listaDeContas[1].Conta);
     
     
     }
