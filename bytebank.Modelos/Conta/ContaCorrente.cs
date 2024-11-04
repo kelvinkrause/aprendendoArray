@@ -99,6 +99,7 @@
 		public ContaCorrente(int numero_agencia, string conta)
 		{
 			Numero_agencia = numero_agencia;
+			Titular = new Cliente();
 			Conta = conta;
 			TotalDeContasCriadas += 1;
 
