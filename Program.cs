@@ -5,12 +5,19 @@ using bytebank_ATENDIMENTO.bytebank.Util;
 internal class Program
 {
 
-    ArrayList _listaDeContas = new ArrayList();
+    static List<ContaCorrente> _listaDeContas = null!;
 
     public static void Main(string[] args)
     {
         Console.Clear();
         Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
+
+        _listaDeContas = new List<ContaCorrente>() 
+        {
+        new ContaCorrente(888888, "KKK") {Saldo = 10000},
+        new ContaCorrente(202020, "GGG") {Saldo = 10000},
+        new ContaCorrente(000000, "PPP") {Saldo = 50000}
+        };
 
         new Program().AtendimentoCliente();
 
@@ -34,7 +41,7 @@ internal class Program
             Console.WriteLine("\n");
             Console.Write("Digite a opção desejada: ");
 
-            opcao = Console.ReadLine()[0];
+            opcao = Console.ReadLine()![0];
 
             switch (opcao)
             {
@@ -103,7 +110,7 @@ internal class Program
         foreach(ContaCorrente conta in _listaDeContas)
         {
             Console.WriteLine($"{conta.ToString()}\n");
-            Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+            Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
 
         }
         Console.Write("Digite algo para retornar ao menu principal!");
