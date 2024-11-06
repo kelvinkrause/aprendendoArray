@@ -14,12 +14,19 @@ internal class Program
 
         _listaDeContas = new List<ContaCorrente>() 
         {
-        new ContaCorrente(888888, "KKK") {Saldo = 10000},
-        new ContaCorrente(202020, "GGG") {Saldo = 10000},
-        new ContaCorrente(000000, "PPP") {Saldo = 50000}
+        new ContaCorrente(888888, "KK1") {Saldo = 10000},
+        new ContaCorrente(202020, "GG2") {Saldo = 10000},
+        new ContaCorrente(000000, "PP3") {Saldo = 50000}
         };
 
-        new Program().AtendimentoCliente();
+        List<ContaCorrente> _listaDeContas2 = new List<ContaCorrente>() 
+        {
+        new ContaCorrente(888888, "MM4") {Saldo = 11000},
+        new ContaCorrente(202020, "AA5") {Saldo = 12000},
+        new ContaCorrente(000000, "DD6") {Saldo = 55000}
+        };
+
+        //new Program().AtendimentoCliente();
 
     }
 
@@ -161,5 +168,49 @@ internal class Program
         Console.WriteLine(listaDeContas[1].Conta);
     }
 
+    void MinipulandoList()
+    {
+        //_listaDeContas.AddRange(_listaDeContas2);
+
+        _listaDeContas.Reverse();
+
+        _listaDeContas.ForEach(contas => Console.WriteLine(contas.Conta));
+        var range = _listaDeContas.GetRange(0, 2);
+        range.ToList().ForEach(conta => Console.WriteLine("-> " + conta.Conta));
+
+
+        List<string> nomesDosEscolhidos = new List<string>()
+        {
+            "Bruce Wayne",
+            "Carlos Vilagran",
+            "Richard Grayson",
+            "Bob Kane",
+            "Will Farrel",
+            "Lois Lane",
+            "General Welling",
+            "Perla Letícia",
+            "Uxas",
+            "Diana Prince",
+            "Elisabeth Romanova",
+            "Anakin Wayne"
+        };
+
+        System.Console.WriteLine(nomesDosEscolhidos.Contains("Anakin Wayne") ? "Contem" : "Não Contém");
+
+
+    }
+
+}
+
+public class ClasseGenerica<ContaCorrente> 
+{
+
+    //ClasseGenerica<ContaCorrente>.Mensagem("Teste");
+
+    public static void Mensagem(string mensagem)
+    {
+        System.Console.Write($"Essa é uma classe genérica: {mensagem}");
+        Console.ReadKey();
+    }
 }
 
