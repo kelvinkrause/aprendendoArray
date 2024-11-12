@@ -72,6 +72,12 @@ internal class Program
                     case '3':
                         RemoverConta();
                         break;
+                    case '4':
+                        OrdenarContas();
+                        break;
+                    case '6':
+                        SairDoSistema();
+                        break;
                     default:
                         Console.WriteLine("Opcao não implementada.");
                         break;
@@ -179,6 +185,18 @@ internal class Program
         
         Console.ReadKey();
 
+    }
+
+    void OrdenarContas()
+    {
+
+    }
+    void SairDoSistema()
+    {
+        Console.Clear();
+        Console.WriteLine("Saindo do sistema ByteBank");
+        Thread.Sleep(800);
+        Console.Clear();
     }
 
     void ManipulandoArray()
