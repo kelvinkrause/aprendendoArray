@@ -8,27 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\cimol\\.nuget\\packages\\": {}
+    "E:\\Users\\kelvin.krause\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cimol\\source\\repos\\aprendendoArray\\bytebank_ATENDIMENTO.csproj",
+      "projectUniqueName": "F:\\Estudos\\Array_Collections_C-aula01\\bytebank_ATENDIMENTO\\bytebank_ATENDIMENTO.csproj",
       "projectName": "bytebank_ATENDIMENTO",
-      "projectPath": "C:\\Users\\cimol\\source\\repos\\aprendendoArray\\bytebank_ATENDIMENTO.csproj",
-      "packagesPath": "C:\\Users\\cimol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cimol\\source\\repos\\aprendendoArray\\obj\\",
+      "projectPath": "F:\\Estudos\\Array_Collections_C-aula01\\bytebank_ATENDIMENTO\\bytebank_ATENDIMENTO.csproj",
+      "packagesPath": "E:\\Users\\kelvin.krause\\.nuget\\packages\\",
+      "outputPath": "F:\\Estudos\\Array_Collections_C-aula01\\bytebank_ATENDIMENTO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\cimol\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "E:\\Users\\kelvin.krause\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -41,11 +38,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -62,30 +54,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.33, 6.0.33]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.33, 6.0.33]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.33, 6.0.33]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.33, 6.0.33]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.424\\RuntimeIdentifierGraph.json"
       }
     }
   }

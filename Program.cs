@@ -69,6 +69,9 @@ internal class Program
                     case '2':
                         ListarContas();
                         break;
+                    case '3':
+                        RemoverConta();
+                        break;
                     default:
                         Console.WriteLine("Opcao não implementada.");
                         break;
@@ -138,6 +141,42 @@ internal class Program
 
         }
         Console.Write("Digite algo para retornar ao menu principal!");
+        Console.ReadKey();
+
+    }
+
+    void RemoverConta()
+    {
+        Console.Clear();
+        Console.WriteLine("===============================");
+        Console.WriteLine("===      REMOVER CONTA      ===");
+        Console.WriteLine("===============================");
+        Console.WriteLine("\n");
+
+        System.Console.Write("Informe o Numero da Conta: ");
+        string numeroConta = Console.ReadLine()!;
+
+        ContaCorrente contaCorrente = null;
+
+        foreach(ContaCorrente conta in _listaDeContas)
+        {
+            if(conta.Conta.Equals(numeroConta))
+            {
+                contaCorrente = conta;
+                break;
+            }
+        }
+
+        if(contaCorrente != null)
+        {
+            _listaDeContas.Remove(contaCorrente);
+            Console.WriteLine("... Conta removida da lista! ...");
+        }
+        else
+        {
+            Console.WriteLine("... Conta para remoção não encontrada na lista ...");
+        }
+        
         Console.ReadKey();
 
     }
