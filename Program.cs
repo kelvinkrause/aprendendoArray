@@ -189,6 +189,15 @@ internal class Program
 
     void OrdenarContas()
     {
+        Console.Clear();
+        Console.WriteLine("===============================");
+        Console.WriteLine("===      ORDENAR CONTAS     ===");
+        Console.WriteLine("===============================");
+        Console.WriteLine("\n");
+
+        _listaDeContas.Sort();
+        Console.WriteLine("... Lista de Contas Ordenadas ...");
+        Console.ReadKey(true);
 
     }
     void SairDoSistema()
