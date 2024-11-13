@@ -15,7 +15,7 @@ internal class Program
 
         _listaDeContas = new List<ContaCorrente>() 
         {
-        new ContaCorrente(888888, "KK1") {Saldo = 10000},
+        new ContaCorrente(888888, "KK1") {Saldo = 10000, Titular = new Cliente() {Cpf = "203010"}},
         new ContaCorrente(202020, "GG2") {Saldo = 10000},
         new ContaCorrente(000000, "PP3") {Saldo = 50000}
         };
@@ -74,6 +74,9 @@ internal class Program
                         break;
                     case '4':
                         OrdenarContas();
+                        break;
+                    case '5':
+                        PesquisarContas();
                         break;
                     case '6':
                         SairDoSistema();
@@ -200,6 +203,71 @@ internal class Program
         Console.ReadKey(true);
 
     }
+
+    void PesquisarContas()
+    {
+        Console.Clear();
+        Console.WriteLine("===============================");
+        Console.WriteLine("===     PESQUISAR CONTAS    ===");
+        Console.WriteLine("===============================");
+        Console.WriteLine("\n");
+        Console.Write("Deseja pesquisar por (1) NUMERO DA CONTA ou (2) CPF TITULAR? ");
+
+        switch(int.Parse(Console.ReadLine()!))
+        {
+            case 1:
+                Console.Write("Informe o Numero da Conta: ");
+                ContaCorrente consultaNumeroConta = ConsultaPorNumeroConta(Console.ReadLine()!);
+                if (consultaNumeroConta == null) 
+                {
+                    Console.WriteLine("Conta não encontrada a partir do Numero da Conta.");
+                    Console.ReadKey(true);
+                    return;
+                }
+                Console.WriteLine($"\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                Console.WriteLine(consultaNumeroConta);
+                Console.WriteLine($">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                Console.ReadKey();
+                break;
+            case 2:
+                Console.Write("Informe o Numero do CPF do Titular: ");
+                ContaCorrente consultaCPFContaTitular = ConsultaPorCPFTitular(Console.ReadLine()!);
+                if (consultaCPFContaTitular == null) 
+                {
+                    Console.WriteLine("Conta não encontrada a partir do CPF.");
+                    Console.ReadKey(true);
+                    return;
+                }
+                Console.WriteLine($"\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                Console.WriteLine(consultaCPFContaTitular);
+                Console.WriteLine($">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                Console.ReadKey();
+                break;
+            default:
+                Console.WriteLine("Opcao não implementada.");
+                break;
+        }
+
+    }
+
+    ContaCorrente ConsultaPorNumeroConta(string numeroConta)
+    {
+        foreach(ContaCorrente conta in _listaDeContas)
+        {
+            if(conta.Conta.Equals(numeroConta)) return conta;
+        }
+        return null;
+    }
+
+    ContaCorrente ConsultaPorCPFTitular(string cpfTitual)
+    {
+        foreach(ContaCorrente conta in _listaDeContas)
+        {
+            if(conta.Titular.Cpf.Equals(cpfTitual)) return conta;
+        }
+        return null;
+    }
+
     void SairDoSistema()
     {
         Console.Clear();
