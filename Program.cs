@@ -15,9 +15,9 @@ internal class Program
 
         _listaDeContas = new List<ContaCorrente>() 
         {
-        new ContaCorrente(888888, "KK1") {Saldo = 10000, Titular = new Cliente() {Cpf = "203010"}},
-        new ContaCorrente(202020, "GG2") {Saldo = 10000},
-        new ContaCorrente(000000, "PP3") {Saldo = 50000}
+        new ContaCorrente(888888, "KK1") {Saldo = 10000, Titular = new Cliente() {Nome = "Kelvin", Cpf = "203010"}},
+        new ContaCorrente(202020, "GG2") {Saldo = 10000, Titular = new Cliente() {Nome = "Giovana", Cpf = "102030"}},
+        new ContaCorrente(000000, "PP3") {Saldo = 50000, Titular = new Cliente() {Nome = "Particular", Cpf = "000000"}}
         };
 
         List<ContaCorrente> _listaDeContas2 = new List<ContaCorrente>() 
@@ -258,7 +258,7 @@ internal class Program
         }
         return null;
     }
-
+    
     ContaCorrente ConsultaPorCPFTitular(string cpfTitual)
     {
         foreach(ContaCorrente conta in _listaDeContas)
