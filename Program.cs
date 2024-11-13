@@ -252,20 +252,28 @@ internal class Program
 
     ContaCorrente ConsultaPorNumeroConta(string numeroConta)
     {
-        foreach(ContaCorrente conta in _listaDeContas)
-        {
-            if(conta.Conta.Equals(numeroConta)) return conta;
-        }
-        return null;
+        //foreach(ContaCorrente conta in _listaDeContas)
+        //{
+        //    if(conta.Conta.Equals(numeroConta)) return conta;
+        //}
+        //return null;
+
+        return _listaDeContas
+                    .Where(conta => conta.Conta.Equals(numeroConta))
+                    .FirstOrDefault()!;
     }
     
-    ContaCorrente ConsultaPorCPFTitular(string cpfTitual)
+    ContaCorrente ConsultaPorCPFTitular(string cpfTitular)
     {
-        foreach(ContaCorrente conta in _listaDeContas)
-        {
-            if(conta.Titular.Cpf.Equals(cpfTitual)) return conta;
-        }
-        return null;
+        //foreach(ContaCorrente conta in _listaDeContas)
+        //{
+        //    if(conta.Titular.Cpf.Equals(cpfTitual)) return conta;
+        //}
+        //return null;
+
+        return _listaDeContas
+                    .Where(conta => conta.Titular.Cpf.Equals(cpfTitular))
+                    .FirstOrDefault()!;
     }
 
     void SairDoSistema()
