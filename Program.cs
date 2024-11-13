@@ -15,8 +15,8 @@ internal class Program
 
         _listaDeContas = new List<ContaCorrente>() 
         {
-        new ContaCorrente(888888, "KK1") {Saldo = 10000, Titular = new Cliente() {Nome = "Kelvin", Cpf = "203010"}},
-        new ContaCorrente(202020, "GG2") {Saldo = 10000, Titular = new Cliente() {Nome = "Giovana", Cpf = "102030"}},
+        new ContaCorrente(888888, "KK1") {Saldo = 10000, Titular = new Cliente() {Nome = "Kelvin Renan Krause", Cpf = "203010"}},
+        new ContaCorrente(888888, "GG2") {Saldo = 10000, Titular = new Cliente() {Nome = "Giovana Born de Aguiar", Cpf = "102030"}},
         new ContaCorrente(000000, "PP3") {Saldo = 50000, Titular = new Cliente() {Nome = "Particular", Cpf = "000000"}}
         };
 
@@ -145,7 +145,7 @@ internal class Program
 
         foreach(ContaCorrente conta in _listaDeContas)
         {
-            Console.WriteLine($"{conta.ToString()}\n");
+            Console.WriteLine($"{conta}\n");
             Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
 
         }
@@ -211,7 +211,7 @@ internal class Program
         Console.WriteLine("===     PESQUISAR CONTAS    ===");
         Console.WriteLine("===============================");
         Console.WriteLine("\n");
-        Console.Write("Deseja pesquisar por (1) NUMERO DA CONTA ou (2) CPF TITULAR? ");
+        Console.Write("Deseja pesquisar por (1) NUMERO DA CONTA, (2) CPF TITULAR ou (3) NUMERO AGÊNCIA? ");
 
         switch(int.Parse(Console.ReadLine()!))
         {
@@ -241,6 +241,17 @@ internal class Program
                 Console.WriteLine($"\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                 Console.WriteLine(consultaCPFContaTitular);
                 Console.WriteLine($">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                Console.ReadKey();
+                break;
+            case 3:
+                Console.Write("Infome o Numero da Agência: ");
+                var _listaContasPorNumAgencia = ConsultaPorNumeroAgencia(int.Parse(Console.ReadLine()!));
+                foreach(ContaCorrente conta in _listaContasPorNumAgencia) 
+                {
+                    Console.WriteLine($">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                    Console.WriteLine(conta);
+                    Console.WriteLine($">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                }
                 Console.ReadKey();
                 break;
             default:
@@ -274,6 +285,13 @@ internal class Program
         return _listaDeContas
                     .Where(conta => conta.Titular.Cpf.Equals(cpfTitular))
                     .FirstOrDefault()!;
+    }
+
+    List<ContaCorrente> ConsultaPorNumeroAgencia(int numeroAgencia)
+    {
+        return _listaDeContas = (from conta in _listaDeContas
+                                where conta.Numero_agencia.Equals(numeroAgencia)
+                                select conta).ToList();
     }
 
     void SairDoSistema()
