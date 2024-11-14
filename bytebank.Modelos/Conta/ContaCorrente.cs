@@ -102,8 +102,17 @@
 			Titular = new Cliente();
 			Conta = conta;
 			TotalDeContasCriadas += 1;
-
 		}
+
+		public ContaCorrente(int numero_agencia)
+		{
+			Numero_agencia = numero_agencia;
+			Titular = new Cliente();
+			Conta = Guid.NewGuid().ToString().Substring(0, 8);
+			TotalDeContasCriadas += 1;
+		}
+
+
 
 		public override string ToString()
 		{
